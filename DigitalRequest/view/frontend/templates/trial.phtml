@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var \Magento\Catalog\Block\Product\View $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+$product = $block->getProduct();
+$url = $block->getBaseUrl() . 'supersite-trial';
+?>
+<?php if ($product->getRequestDigitalAccess()): ?>
+    <div class="product attribute action-request">
+        <a href="<?= $block->getUrl("digitalrequest/product/access")?>?id=<?= $product->getId()?>" class="request button secondary">
+            <?= __('Request Digital Access') ?>
+        </a>
+    </div>
+<?php endif; ?>
+

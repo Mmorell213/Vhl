@@ -1,0 +1,40 @@
+<?php
+/**
+ * @var \Magento\Catalog\Block\Product\View $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+$product = $block->getProductById();
+$url = $block->getBaseUrl() . 'supersite-trial';
+?>
+<?php if ($product->getRequestDigitalAccess()): ?>
+    <div class="product attribute request-trial">
+        <h3 id="request-digital-access">Request Digital Access</h3>
+        <div class="request-trial-form">
+            <form id="mktoForm_2356" class="mktoForm"></form>
+            <script type="text/javascript">
+                require([
+                    'jquery'
+                ], function ($) {
+                    $(document).ready(function() {
+                        $.ajax({
+                            url: '//go.vistahigherlearning.com/js/forms2/js/forms2.min.js',
+                            dataType: 'script',
+                            cache: true,
+                            success: function() {
+                                MktoForms2.loadForm("//go.vistahigherlearning.com", "156-GRO-136", 2356,function(form) {
+                                // Set the value of the Phone and Country fields
+                                form.vals({ "Instructor_Product_Requests__c":"<?= $product->getName()?>"});
+                                document.getElementById("Instructor_Product_Requests__c").disabled = true;
+                                
+                            });
+                            }
+                            
+                            
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </div>
+<?php endif; ?>

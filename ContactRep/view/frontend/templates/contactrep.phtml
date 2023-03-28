@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var \Perficient\ContactRep\Block\ContactRep $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+?>
+
+<?php if ($block->getContactRep()): ?>
+    <div class="product attribute contact-rep">
+        <a target="_blank" href="/support/find-a-rep" class="request button secondary">
+            <?= __('Contact Your Sales Rep') ?>
+        </a>
+    </div>
+<?php endif; ?>

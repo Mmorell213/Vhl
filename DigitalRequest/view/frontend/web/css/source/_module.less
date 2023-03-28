@@ -1,0 +1,46 @@
+body.digitalrequest-product-access{
+  background-color: #f5f5f5;
+
+  .request-trial{
+    text-align: center;
+  }
+
+  h3{
+    color: #150E56;
+  }
+  label#LblInstructor_Product_Requests__c{
+    width: unset !important;
+  }
+  .request-trial-form{
+    background: white;
+    box-shadow: 0px 1px 8px #00000014;
+    padding: 25px 30px;
+    width: calc(40%);
+    height: 559px;
+    border-radius: 8px;
+    margin-inline: 326px;
+    margin-block: 30px;
+    margin-bottom: 70px;
+  }
+
+  .page-footer::before{
+    content:" ";
+    width:100%;
+    background-image:url("../../images/bg-paint_3.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-color:#f5f5f5;
+    display: block;
+    height:50px;
+    background-size:100% auto;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  body.digitalrequest-product-access{
+    .request-trial-form{
+      width: calc(73%);
+      margin-inline: 21px;
+    }
+  }
+}

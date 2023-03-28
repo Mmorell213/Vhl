@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="Perficient\DigitalRequest\Block\Bradcrumb" name="digitalrequest_product_access" template="Perficient_DigitalRequest::trial-form.phtml" />
+        <block class="Perficient\DigitalRequest\Block\Product" name="digitalrequest_product_access" template="Perficient_DigitalRequest::trial-form.phtml" />
+    </referenceContainer>
+    <referenceBlock name="breadcrumbs">
+        <action method="addCrumb">
+            <argument name="crumbName" xsi:type="string">home</argument>
+            <argument name="crumbInfo" xsi:type="array">
+                <item name="title" xsi:type="string">Home</item>
+                <item name="label" xsi:type="string">Home</item>
+                <item name="link" xsi:type="string">/</item>
+            </argument>
+        </action>
+        <action method="addCrumb">
+            <argument name="crumbName" xsi:type="string">DigitalRequest</argument>
+            <argument name="crumbInfo" xsi:type="array">
+                <item name="title" xsi:type="string">DigitalRequest</item>
+                <item name="label" xsi:type="string">DigitalRequest</item>
+            </argument>
+        </action>
+    </referenceBlock>
+</page>
